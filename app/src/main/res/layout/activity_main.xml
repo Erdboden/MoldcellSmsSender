@@ -29,16 +29,6 @@
         android:rowCount="6">
 
         <TextView
-            android:id="@+id/desctxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:text="New Text" />
-
-        <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,59 +64,14 @@
             android:text="De la:"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <ImageView
-            android:id="@+id/captcha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/sender"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/sender"
-            android:layout_column="0"
-            android:layout_marginTop="67dp"
-            android:layout_row="3"
-            android:layout_toStartOf="@+id/captchaEnter" />
-
-        <EditText
-            android:id="@+id/captchaEnter"
-            android:layout_width="208dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/captcha"
-            android:layout_alignParentEnd="true"
-            android:layout_column="1"
-            android:layout_marginTop="67dp"
-            android:layout_row="3"
-            android:layout_toEndOf="@+id/sender" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="4"
-            android:text="Mesaj"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
         <EditText
             android:id="@+id/message"
             android:layout_width="wrap_content"
-            android:layout_height="173dp"
+            android:layout_height="113dp"
             android:layout_column="1"
             android:layout_row="4"
             android:ems="10"
             android:inputType="textMultiLine" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_column="1"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="20dp"
-            android:layout_row="5"
-            android:onClick="SendSms"
-            android:text="Send" />
 
         <EditText
             android:id="@+id/sender"
@@ -138,6 +83,50 @@
             android:layout_column="1"
             android:layout_marginTop="45dp"
             android:layout_row="2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:text="Mesaj"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ImageView
+            android:id="@+id/captcha"
+            android:layout_width="120dp"
+            android:layout_height="98dp"
+            android:layout_alignEnd="@+id/sender"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sender"
+            android:layout_column="0"
+            android:layout_marginTop="0dp"
+            android:layout_row="3"
+            android:layout_toStartOf="@+id/captchaEnter"
+            android:layout_marginBottom="0dp" />
+
+        <EditText
+            android:id="@+id/captchaEnter"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/captcha"
+            android:layout_alignParentEnd="true"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_toEndOf="@+id/sender"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:onClick="SendSms"
+            android:text="Send" />
 
     </GridLayout>
 </RelativeLayout>

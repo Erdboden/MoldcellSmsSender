@@ -79,6 +79,10 @@ public class MainActivity extends Activity {
                 myData.put("captcha_response", captchaStr);
 
                 new sendRequestAsync().execute(URL_ACTION);
+                phoneNr.setText("");
+                sender.setText("");
+                message.setText("");
+                captcha.setText("");
             }
         });
     }
