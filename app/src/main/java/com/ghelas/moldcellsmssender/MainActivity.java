@@ -224,14 +224,6 @@ public class MainActivity extends Activity {
             frameAnimation.start();
 
 
-//            img.setBackgroundResource(R.drawable.mygif);
-//            img.setVisibility(View.VISIBLE);
-//
-//            // Get the background, which has been compiled to an AnimationDrawable object.
-//            frameAnimation = (AnimationDrawable) img.getBackground();
-//
-//            // Start the animation (looped playback by default).
-//            frameAnimation.start();
 
         }
 
