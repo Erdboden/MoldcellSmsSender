@@ -1,8 +1,10 @@
 package com.ghelas.moldcellsmssender;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -164,9 +166,10 @@ public class MainActivity extends Activity {
 
     private class MoldcellParserCaptcha extends AsyncTask<Void, Void, Void> {
 
-
+        AnimationDrawable frameAnimation;
         Bitmap bitmap;
-
+        ImageView img= (ImageView)findViewById(R.id.main_progress);
+        ProgressDialog mProgressDialog;
         @Override
         protected Void doInBackground(Void... parameters) {
             try {
@@ -211,10 +214,35 @@ public class MainActivity extends Activity {
             }
             return null;
         }
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            img.setBackgroundResource(R.drawable.mygif);
+            frameAnimation = (AnimationDrawable)img.getBackground();
+            img.setVisibility(View.VISIBLE);
+            frameAnimation.start();
+
+
+//            img.setBackgroundResource(R.drawable.mygif);
+//            img.setVisibility(View.VISIBLE);
+//
+//            // Get the background, which has been compiled to an AnimationDrawable object.
+//            frameAnimation = (AnimationDrawable) img.getBackground();
+//
+//            // Start the animation (looped playback by default).
+//            frameAnimation.start();
+
+        }
 
         protected void onPostExecute(Void result) {
             // Set downloaded image into ImageView
             captchaImg.setImageBitmap(bitmap);
+//            frameAnimation.stop();
+//            img.setVisibility(View.INVISIBLE);
+//            mProgressDialog.dismiss();
+            img.setVisibility(View.GONE);
+            frameAnimation.stop();
 
 
 
